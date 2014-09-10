@@ -72,11 +72,11 @@ Verify that everything is working:
 ### Fixing RabbitMQ issues
 
 if you got error about RabbitMqBrokerClient, try to do next:
-* goto ReabbitMQ web ui http://localhost:15672/ and login as `guest/guest`    
+* goto [ReabbitMQ web ui] (http://localhost:15672/) and login as `guest/guest`
 * in Virtual Host tab create VH `acs`
 * in Admin tab create user `acs_user/acs` with administrator tag and grant him acces `.* .* .*` to `acs` VH
 * in Exchanges tab create new exchanges (topics) for `acs` VH: `Local.Broadcasts`, `Local.Channels`, `Local.Requests`, `Zone.Replies`.
  
-Also see RabbitMQ logs for any issues: /var/log/rabbitmq/
+Also see RabbitMQ logs for any issues: `/var/log/rabbitmq/`
 
 Cheers!
